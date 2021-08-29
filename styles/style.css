@@ -1,7 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,700&display=swap");
+
 ::before,
 ::after,
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --def-shadow: 3px 3px #1a1616;
+  --yellow: #e6db74;
+  --dark: #272822;
+  --white: #f8f8f2;
+  --red: #f92672;
+  --green: #a6e22e;
+  --blue: #66d0ef;
+  --violet: #ae81ff;
+  --dark2: #3e3d32;
+}
+
+::selection {
+  background-color: var(--green);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--dark);
+  font-family: "Ubuntu", sans-serif;
+  color: var(--white);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border: 3px #000000 solid;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: border-radius 200ms, box-shadow 200ms, color 200ms,
+    background-color 200ms;
+}
+
+.btn:hover {
+  box-shadow: var(--def-shadow);
+  border-radius: 10px;
+  background-color: var(--yellow);
+  color: var(--white);
+}
+
+.code-brackets {
+  display: inline-block;
+  color: var(--green);
+  transition: transform 200ms;
+  font-weight: 700;
+}
+
+.tab-container {
+  padding-top: 10px;
+  background-color: #0e0808;
+}
+
+.tab {
+  background-color: var(--dark);
+  display: flex;
+  padding: 10px 0px;
+  width: 15%;
+  border-start-end-radius: 10px;
+}
+
+.tab__button {
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.tab .tab__button:nth-child(1) {
+  background-color: var(--red);
+}
+
+.tab .tab__button:nth-child(2) {
+  background-color: var(--yellow);
+}
+
+.tab .tab__button:nth-child(3) {
+  background-color: var(--green);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--white);
+  margin-left: 30px;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.nav__link:hover .code-brackets {
+  transform: translate(-7px, -7px);
+}
+
+.nav__link:hover .--close {
+  transform: translate(7px, 7px);
+}
+
+@media (max-width: 800px) {
+  .tab {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-start-start-radius: 20px;
+    border-start-end-radius: 20px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .nav__link {
+    margin: 10px;
+  }
+
+  .nav__icon {
+    margin-bottom: 10px;
+  }
 }
