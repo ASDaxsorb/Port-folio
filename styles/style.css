@@ -298,3 +298,10 @@ body {
 .contact__link:hover {
   background-color: var(--orange);
 }
+
+.footer {
+  background-color: var(--dark2);
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+}
