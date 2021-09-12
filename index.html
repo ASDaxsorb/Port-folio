@@ -9,9 +9,38 @@
       src="https://kit.fontawesome.com/50ac324aff.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script defer src="src/js/main.js"></script>
   </head>
   <body>
+    <button class="side-menu-button" id="menu-button">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="side-menu collapsed" id="side-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#welcome-section">
+            <span class="code-brackets"><</span>
+            About
+            <span class="code-brackets --close"> /> </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#projects">
+            <span class="code-brackets"><</span>
+            Projects
+            <span class="code-brackets --close"> /> </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#contact">
+            <span class="code-brackets"><</span>
+            Contact
+            <span class="code-brackets --close"> /> </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div class="header-container">
       <div class="tab-container">
         <div class="tab">
