@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;800&display=swap");
 
 ::before,
 ::after,
@@ -28,7 +28,7 @@ html {
 
 body {
   background-color: var(--dark);
-  font-family: 'JetBrains Mono', monospace, sans-serif;
+  font-family: "JetBrains Mono", monospace, sans-serif;
   color: var(--white);
 }
 
@@ -67,7 +67,7 @@ body {
 
 .tab-container {
   padding-top: 10px;
-  background-color: #0e0808;
+  background-color: #1b1b1b;
 }
 
 .tab {
@@ -165,13 +165,15 @@ body {
   top: 0;
   left: 0px;
   z-index: 10;
-  background-color: var(--dark);
+  border-bottom: 0.1px solid #33352d;
 }
 
 .header {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
+  background-color: #272822e0;
+  backdrop-filter: blur(8px);
 }
 
 .nav__list {
