@@ -263,17 +263,22 @@ body {
 }
 
 .projects__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 90%;
   margin: 50px 20px;
-  display: grid;
   gap: 30px 40px;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* justify-content: center;
+  flex-wrap: wrap;
+  align-items: center; */
 }
 
 .projects__item {
+  width: 35%;
+  max-width: 1fr;
+  min-width: 300px;
   position: relative;
   display: block;
   color: var(--white);
@@ -281,11 +286,13 @@ body {
   overflow: hidden;
   border: 3px var(--dark2) solid;
   border-radius: 5px;
-  transition: transform 0.2s, box-shadow 0.2s, border-radius 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-radius 0.2s,
+    border-color 0.2s;
 }
 
 .projects__item:hover {
   box-shadow: var(--def-shadow);
+  border-color: var(--green);
   border-start-start-radius: 50px;
   border-end-end-radius: 50px;
   transform: translateY(-10px);
@@ -319,7 +326,7 @@ body {
   margin-top: 30px;
   display: flex;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
